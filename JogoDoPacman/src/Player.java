@@ -1,42 +1,32 @@
 
-public class Player extends GameObject {
+public class Player extends PlayerGeneric {
 
-    private int life = 5;
-    private boolean invencible = false;
-    private int direcao;
+    private int life;
+    private boolean invencible;
 
-    public Player(int posicaoX, int posicaoY, int direcao) {
-        super(posicaoX, posicaoY);
-        this.direcao = direcao;
+    public Player() {
     }
 
-    public boolean podeMover() {
+    public Player(int x, int y, int direction) {
+        super(x, y, direction);
+    }
 
-        if (posicaoX + 10 > tamanhoTela && direcao == 90) {
-            return false;
-        }
+    public boolean colide(GameObject object){
+        return(
+            this.getX() == object.getX() &&
+            this.getY() == object.getY() 
+        );
+    }
 
-        if (posicaoX - 10 < tamanhoTela && direcao == 270) {
-            return false;
-        }
-        if (posicaoY + 10 > tamanhoTela && direcao == 180) {
-            return false;
-        }
-        if (posicaoY - 10 < tamanhoTela && direcao == 0) {
-            return false;
-        }
-
-        return true;
-
+    public void damage(){
+        life--;
     }
 
     public int getLife() {
         return life;
     }
 
-    public void setLife(int life) {
-        this.life = life;
-    }
+   
 
     public boolean isInvencible() {
         return invencible;
@@ -46,12 +36,6 @@ public class Player extends GameObject {
         this.invencible = invencible;
     }
 
-    public int getDirecao() {
-        return direcao;
-    }
-
-    public void setDirecao(int direcao) {
-        this.direcao = direcao;
-    }
+    
 
 }

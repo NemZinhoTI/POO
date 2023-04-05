@@ -1,22 +1,20 @@
 public class Booster extends Item {
 
-    private int duracao;
+    private int duration;
 
-    public Booster() {
-        
+    public Booster() {}
+
+    public Booster(int x, int y, boolean visible, int duration) {
+        super(x, y, visible);
+        this.duration = duration;
     }
 
-    public Booster(int posicaoX, int posicaoY, boolean visivel, int duracao) {
-        super(posicaoX, posicaoY, visivel);
-        this.duracao = duracao;
+    public int getDuration() {
+        return duration;
     }
 
-    public int getDuracao() {
-        return duracao;
-    }
-
-    public void setDuracao(int duracao) {
-        this.duracao = duracao;
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
     
 }

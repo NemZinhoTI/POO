@@ -1,46 +1,47 @@
 public abstract class GameObject {
 
-    protected int posicaoX;
-    protected int posicaoY;
-    protected int tamanhoTela;
+    protected int x;
+    protected int y;
+    protected int screenSize;
 
     public GameObject() {
 
     }
 
-    public GameObject(int posicaoX, int posicaoY) {
-        if (posicaoX < 0 && posicaoY < 0) {
+    public GameObject(int x, int y) {
+        if (x < 0 || y < 0) {
             System.out.println("A posição só funiona com numeros positivos.");
         } else {
-            this.posicaoX = posicaoX;
-            this.posicaoY = posicaoY;
+            this.x = x;
+            this.y = y;
         }
 
     }
 
-    public int getPosicaoX() {
-
-        return posicaoX;
+    public int getX() {
+        return x;
     }
 
-    public void setPosicaoX(int posicaoX) {
-        this.posicaoX = posicaoX;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int getPosicaoY() {
-        return posicaoY;
+    public int getY() {
+        return y;
     }
 
-    public void setPosicaoY(int posicaoY) {
-        this.posicaoY = posicaoY;
+    public void setY(int y) {
+        this.y = y;
     }
 
-    public int getTamanhoTela() {
-        return tamanhoTela;
+    public int getScreenSize() {
+        return screenSize;
     }
 
-    public void setTamanhoTela(int tamanhoTela) {
-        this.tamanhoTela = tamanhoTela;
+    public void setScreenSize(int screenSize) {
+        this.screenSize = screenSize;
     }
+
+    
 
 }

@@ -1,13 +1,11 @@
 public class Bomb extends Item {
     
 
-    public Bomb() {
-
-    }
+    public Bomb() {}
 
 
-    public Bomb(int posicaoX, int posicaoY, boolean visivel) {
-        super(posicaoX, posicaoY, visivel);
+    public Bomb(int x, int y, boolean visible) {
+        super(x, y, visible);
         
     }
 

@@ -1,22 +1,20 @@
 public class Item extends GameObject {
 
-    private boolean visivel = false;
+    private boolean visible = false;
 
-    public Item() {
+    public Item() {}
 
-    }
-
-    public Item(int posicaoX, int posicaoY, boolean visivel) {
-        super(posicaoX, posicaoY);
-        this.visivel = visivel;
+    public Item(int x, int y, boolean visible) {
+        super(x, y);
+        
     }
 
     public boolean isVisivel() {
-        return visivel;
+        return visible;
     }
 
-    public void setVisivel(boolean visivel) {
-        this.visivel = visivel;
+    public void setVisivel(boolean visible) {
+        this.visible = visi]ble;
     }
 
 }
